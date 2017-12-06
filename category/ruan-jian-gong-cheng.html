@@ -20,7 +20,69 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/kai-fa-gui-fan-dan-yuan-ce-shi.html">开发规范-单元测试</a></h1>
+                    <h1 class="entry-title"><a href="/javaxue-xi-bi-ji-fan-she.html">Java学习笔记-反射</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-12-06T19:00:00+08:00">
+                Published: 周三 06 十二月 2017
+        </abbr>
+		<br />
+        <abbr class="modified" title="2017-12-06T19:00:00+08:00">
+                Updated: 周三 06 十二月 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/easyfun.html">easyfun</a>
+        </address>
+<p>In <a href="/category/ruan-jian-gong-cheng.html">软件工程</a>.</p>
+<p>tags: <a href="/tag/javaxue-xi-bi-ji.html">Java学习笔记</a> </p>
+</footer><!-- /.post-info --><h3>Java反射</h3>
+<p>JVM内存空间分布
+    程序计数器（线程执行环境 ）
+    Java虚拟机栈（线程执行环境 ）
+    本地方法栈（线程执行环境 ）
+    Java堆（线程共享）
+    方法区（线程共享）
+    运行时常量池（线程共享）
+    直接内存（线程共享）</p>
+<ol>
+<li>类加载器的作用是什么？
+加载Java的字节码（class）文件，在加载过程中会解析、验证字节码文件，载入方法区</li>
+</ol>
+<p>2.反射实现的基础是什么？如何理解Class类？
+Class类
+Class类是描述类信息的类，例如类名称，父类</p>
+<p>3.Class类里边包含的内容？
+类名
+父类名
+方法列表
+成员变量列表</p>
+<p>4.Class实例化的方式？
+    class OneClass {}
+    OneClass obj=new OneClass();
+    (1) obj.getClass()
+    (2) OneClass.class
+    (3) Class.forName("OneClass")，注意一定要用全类名</p>
+<p>5.Class.forName的工作流程？
+(1)用全类名在方法区查找相应的Class对象
+(2)如果找到返回对应的Class对象
+(3)如果没有找到，从磁盘或者远程服务器加载类，加载失败抛出ClassNotFound异常，加载成功返回对应的Class对象</p>
+<p>6.反射概念的总结
+用Class实例化具体类对象，从而设置具体类对象的成员变量，或者调用具体类的成员方法</p>
+<p>7.反射在框架中的应用？
+IOC，AOP，设置对象属性</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/kai-fa-gui-fan-dan-yuan-ce-shi.html" rel="bookmark"
+                           title="Permalink to 开发规范-单元测试">开发规范-单元测试</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2017-10-22T11:53:00+08:00">
                 Published: 周日 22 十月 2017
@@ -34,12 +96,17 @@
                 By                         <a class="url fn" href="/author/easyfun.html">easyfun</a>
         </address>
 <p>In <a href="/category/ruan-jian-gong-cheng.html">软件工程</a>.</p>
-<p>tags: <a href="/tag/dan-yuan-ce-shi.html">单元测试</a> </p>
-</footer><!-- /.post-info --><p>单元测试是优秀的软工的基本素养</p>
-<p>不管多小的改动，自己必须做单元测试，验证通过后才能提交测试。
-代码开发完之后，开发自己必须做单元测试。</p>
-<p>小结：开发偷懒，不做单元测试，最终浪费的是团队的时间，代价巨大。不伦多么牛逼的开发，都不能保证做过的修改没有一点问题。做好单元测试可以节省与测试之间来回倒腾的宝贵时间，利人利己。</p>                </article>
-            </aside><!-- /#featured -->
+<p>tags: <a href="/tag/kai-fa-gui-fan.html">开发规范</a> </p>
+</footer><!-- /.post-info -->                <h3>单元测试</h3>
+<p>单元测试是优秀软工的基本素养</p>
+<p>不管多小的改动，开发都必须做单元测试，验证通过后才能提交测试。
+代码开发完之后，开发必须做单元测试。</p>
+<p>小结：开发偷懒，不做单元测试，最终浪费的是团队的时间，代价是巨大的。不伦多么优秀的开发，都不能保证做过的修改没有一点问题。做好单元测试可以节省开发、测试的宝贵时间，利人利己。</p>
+                <a class="readmore" href="/kai-fa-gui-fan-dan-yuan-ce-shi.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>links</h2>
