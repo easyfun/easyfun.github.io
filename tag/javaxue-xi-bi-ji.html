@@ -35,41 +35,51 @@
         </address>
 <p>In <a href="/category/ruan-jian-gong-cheng.html">软件工程</a>.</p>
 <p>tags: <a href="/tag/javaxue-xi-bi-ji.html">Java学习笔记</a> </p>
-</footer><!-- /.post-info --><h3>Java反射</h3>
-<p>JVM内存空间分布
-    程序计数器（线程执行环境 ）
-    Java虚拟机栈（线程执行环境 ）
-    本地方法栈（线程执行环境 ）
-    Java堆（线程共享）
-    方法区（线程共享）
-    运行时常量池（线程共享）
-    直接内存（线程共享）</p>
-<ol>
-<li>类加载器的作用是什么？
-加载Java的字节码（class）文件，在加载过程中会解析、验证字节码文件，载入方法区</li>
-</ol>
-<p>2.反射实现的基础是什么？如何理解Class类？
-Class类
-Class类是描述类信息的类，例如类名称，父类</p>
-<p>3.Class类里边包含的内容？
-类名
+</footer><!-- /.post-info --><h1>Java反射</h1>
+<h3>JVM内存空间分布</h3>
+<div class="highlight"><pre><span></span>程序计数器（线程执行环境 ）
+Java虚拟机栈（线程执行环境 ）
+本地方法栈（线程执行环境 ）
+Java堆（线程共享）
+方法区（线程共享）
+运行时常量池（线程共享）
+直接内存（线程共享）
+</pre></div>
+
+
+<h3>1. 类加载器的作用是什么？</h3>
+<p>加载Java的字节码（class）文件，在加载过程中会解析、验证字节码文件，载入方法区</p>
+<h3>2.反射实现的基础是什么？如何理解Class类？</h3>
+<p>Class类</p>
+<p>Class类是描述类信息的类，例如类名称，父类</p>
+<h3>3.Class类里边包含的内容？</h3>
+<div class="highlight"><pre><span></span>类名
 父类名
 方法列表
-成员变量列表</p>
-<p>4.Class实例化的方式？
-    class OneClass {}
-    OneClass obj=new OneClass();
-    (1) obj.getClass()
-    (2) OneClass.class
-    (3) Class.forName("OneClass")，注意一定要用全类名</p>
-<p>5.Class.forName的工作流程？
-(1)用全类名在方法区查找相应的Class对象
+成员变量列表
+</pre></div>
+
+
+<h3>4.Class实例化的方式？</h3>
+<div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">OneClass</span> <span class="p">{}</span>
+<span class="nx">OneClass</span> <span class="nx">obj</span><span class="o">=</span><span class="k">new</span> <span class="nx">OneClass</span><span class="p">();</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">getClass</span><span class="p">()</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="nx">OneClass</span><span class="p">.</span><span class="kr">class</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="nx">Class</span><span class="p">.</span><span class="nx">forName</span><span class="p">(</span><span class="s2">&quot;OneClass&quot;</span><span class="p">)</span><span class="err">，注意一定要用全类名</span>
+</pre></div>
+
+
+<h3>5.Class.forName的工作流程？</h3>
+<div class="highlight"><pre><span></span>(1)用全类名在方法区查找相应的Class对象
 (2)如果找到返回对应的Class对象
-(3)如果没有找到，从磁盘或者远程服务器加载类，加载失败抛出ClassNotFound异常，加载成功返回对应的Class对象</p>
-<p>6.反射概念的总结
-用Class实例化具体类对象，从而设置具体类对象的成员变量，或者调用具体类的成员方法</p>
-<p>7.反射在框架中的应用？
-IOC，AOP，设置对象属性</p>                </article>
+(3)如果没有找到，从磁盘或者远程服务器加载类，加载失败抛出ClassNotFound异常，加载成功返回对应的Class对象
+</pre></div>
+
+
+<h3>6.反射概念的总结</h3>
+<p>用Class实例化具体类对象，从而设置具体类对象的成员变量，或者调用具体类的成员方法</p>
+<h3>7.反射在框架中的应用？</h3>
+<p>IOC，AOP，设置对象属性</p>                </article>
             </aside><!-- /#featured -->
         <section id="extras" class="body">
                 <div class="blogroll">
