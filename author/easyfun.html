@@ -20,7 +20,112 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/javaxue-xi-bi-ji-fan-she.html">Java学习笔记-反射</a></h1>
+                    <h1 class="entry-title"><a href="/mint-18kai-fa-huan-jing-da-jian.html">mint 18开发环境搭建</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2018-01-08T14:00:00+08:00">
+                Published: 周一 08 一月 2018
+        </abbr>
+		<br />
+        <abbr class="modified" title="2018-01-08T14:00:00+08:00">
+                Updated: 周一 08 一月 2018
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/easyfun.html">easyfun</a>
+        </address>
+<p>In <a href="/category/ruan-jian-gong-cheng.html">软件工程</a>.</p>
+<p>tags: <a href="/tag/linux-mint.html">linux mint</a> </p>
+</footer><!-- /.post-info --><h2>1. 安装mint 18</h2>
+<p>xp下无法硬盘安装，使用U盘启动安装。</p>
+<p>在mint官网下载iso镜像</p>
+<p>利用ultraiso制作U盘启动，先往U盘[写入]iso镜像文件，使用raw方式，写入完成之后，[便携启动]写入[syslinux]系统引导文件</p>
+<p>U盘启动安装mint 18，遇到对话框显示不全时，光标移动到对话框上，按住ctrl+shift+alt+鼠标左键+移动鼠标，可以对话框</p>
+<p>修改工作源为阿里云</p>
+<p>Ubuntu/Mint更换阿里云源</p>
+<div class="highlight"><pre><span></span><span class="err">sudo</span> <span class="err">cp</span> <span class="err">/etc/apt/sources.list</span> <span class="err">/etc/apt/sources.list.bak</span> <span class="c">#备份</span>
+<span class="err">sudo</span> <span class="err">vim</span> <span class="err">/etc/apt/sources.list</span> <span class="c">#修改</span>
+
+<span class="c">#阿里云源</span>
+<span class="k">deb</span> <span class="s">http://mirrors.aliyun.com/ubuntu/</span> <span class="kp">trusty</span> <span class="kp">main</span> <span class="kp">restricted</span> <span class="kp">universe</span> <span class="kp">multiverse</span>
+<span class="k">deb</span> <span class="s">http://mirrors.aliyun.com/ubuntu/</span> <span class="kp">trusty-security</span> <span class="kp">main</span> <span class="kp">restricted</span> <span class="kp">universe</span> <span class="kp">multiverse</span>
+<span class="k">deb</span> <span class="s">http://mirrors.aliyun.com/ubuntu/</span> <span class="kp">trusty-updates</span> <span class="kp">main</span> <span class="kp">restricted</span> <span class="kp">universe</span> <span class="kp">multiverse</span>
+<span class="k">deb</span> <span class="s">http://mirrors.aliyun.com/ubuntu/</span> <span class="kp">trusty-proposed</span> <span class="kp">main</span> <span class="kp">restricted</span> <span class="kp">universe</span> <span class="kp">multiverse</span>
+<span class="k">deb</span> <span class="s">http://mirrors.aliyun.com/ubuntu/</span> <span class="kp">trusty-backports</span> <span class="kp">main</span> <span class="kp">restricted</span> <span class="kp">universe</span> <span class="kp">multiverse</span>
+<span class="k">deb-src</span> <span class="s">http://mirrors.aliyun.com/ubuntu/</span> <span class="kp">trusty</span> <span class="kp">main</span> <span class="kp">restricted</span> <span class="kp">universe</span> <span class="kp">multiverse</span>
+<span class="k">deb-src</span> <span class="s">http://mirrors.aliyun.com/ubuntu/</span> <span class="kp">trusty-security</span> <span class="kp">main</span> <span class="kp">restricted</span> <span class="kp">universe</span> <span class="kp">multiverse</span>
+<span class="k">deb-src</span> <span class="s">http://mirrors.aliyun.com/ubuntu/</span> <span class="kp">trusty-updates</span> <span class="kp">main</span> <span class="kp">restricted</span> <span class="kp">universe</span> <span class="kp">multiverse</span>
+<span class="k">deb-src</span> <span class="s">http://mirrors.aliyun.com/ubuntu/</span> <span class="kp">trusty-proposed</span> <span class="kp">main</span> <span class="kp">restricted</span> <span class="kp">universe</span> <span class="kp">multiverse</span>
+<span class="k">deb-src</span> <span class="s">http://mirrors.aliyun.com/ubuntu/</span> <span class="kp">trusty-backports</span> <span class="kp">main</span> <span class="kp">restricted</span> <span class="kp">universe</span> <span class="kp">multiverse</span>
+
+<span class="err">sudo</span> <span class="err">apt-get</span> <span class="err">update</span> <span class="c">#更新列表</span>
+</pre></div>
+
+
+<p>更新系统
+安装Linux Mint 17后要做的20件事
+https://linux.cn/article-3353-1.html</p>
+<h2>2. 安装firefox</h2>
+<p>更新firefox</p>
+<p>安装firefox中文包</p>
+<div class="highlight"><pre><span></span>sudo apt-get install firefox-locale-zh-hans
+</pre></div>
+
+
+<p>安装adobe flash插件</p>
+<p>官网下载flash插件解压，把libflashplayer.so复制到/usr/lib/mozilla/plugins/</p>
+<div class="highlight"><pre><span></span>sudo cp ./libflashplayer.so /usr/lib/mozilla/plugins/
+</pre></div>
+
+
+<ol>
+<li>安装sublime text3</li>
+</ol>
+<p>安装sublime text3</p>
+<p>http://www.linuxidc.com/Linux/2017-06/144432.htm</p>
+<p>安装中文输入支持</p>
+<p>https://www.cnblogs.com/wangkongming/p/4302642.html</p>
+<p>设置</p>
+<h2>4. locate命令的使用</h2>
+<p>https://www.cnblogs.com/flysnail/archive/2012/05/16/2504266.html</p>
+<h2>5. 安装jdk8</h2>
+<h2>6. 安装eclipse</h2>
+<p>https://www.jianshu.com/p/730db54aefab</p>
+<h2>7 安装mysql</h2>
+<p>安装mysql:sudo apt-get install mariadb-client,mariadb-server</p>
+<p>https://imcn.me/html/y2016/27689.html</p>
+<p>sudo apt-get install mariadb-client,mariadb-server安装首次登陆设置</p>
+<p>http://www.err123.com/2017/08/03/error-1698-28000-access-denied-for-user-root-localhost/?lang=zh</p>
+<p>原因:mysql启用plugin功能</p>
+<p>解决:</p>
+<div class="highlight"><pre><span></span>停止服务 sudo service mysql stop
+安全模式启动 mysqld_safe --skip-grant-tables &amp;
+无密码登陆 mysql -u root
+查看plugin状态 select host,user,plugin from mysql.user;
+更改plugin状态 UPDATE mysql.user SET authentication_string=PASSWORD(&#39;easyfun&#39;), PLUGIN=&#39;mysql_native_password&#39; WHERE USER=&#39;root&#39;;
+重启mysql sudo service mysql restart
+登陆 mysql -u root -p
+查看服务器信息 status;
+</pre></div>
+
+
+<p>mysql启动命令:</p>
+<div class="highlight"><pre><span></span>启动mysql sudo service mysql start
+重启mysql sudo service mysql restart
+停止mysql sudo service mysql stop
+</pre></div>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/javaxue-xi-bi-ji-fan-she.html" rel="bookmark"
+                           title="Permalink to Java学习笔记-反射">Java学习笔记-反射</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2017-12-06T19:00:00+08:00">
                 Published: 周三 06 十二月 2017
@@ -35,7 +140,7 @@
         </address>
 <p>In <a href="/category/ruan-jian-gong-cheng.html">软件工程</a>.</p>
 <p>tags: <a href="/tag/javaxue-xi-bi-ji.html">Java学习笔记</a> </p>
-</footer><!-- /.post-info --><h1>Java反射</h1>
+</footer><!-- /.post-info -->                <h1>Java反射</h1>
 <h3>JVM内存空间分布</h3>
 <div class="highlight"><pre><span></span>程序计数器（线程执行环境 ）
 Java虚拟机栈（线程执行环境 ）
@@ -64,27 +169,10 @@ Java堆（线程共享）
 <div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">OneClass</span> <span class="p">{}</span>
 <span class="nx">OneClass</span> <span class="nx">obj</span><span class="o">=</span><span class="k">new</span> <span class="nx">OneClass</span><span class="p">();</span>
 <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">getClass</span><span class="p">()</span>
-<span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="nx">OneClass</span><span class="p">.</span><span class="kr">class</span>
-<span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="nx">Class</span><span class="p">.</span><span class="nx">forName</span><span class="p">(</span><span class="s2">&quot;OneClass&quot;</span><span class="p">)</span><span class="err">，注意一定要用全类名</span>
-</pre></div>
-
-
-<h3>5.Class.forName的工作流程？</h3>
-<div class="highlight"><pre><span></span>(1)用全类名在方法区查找相应的Class对象
-(2)如果找到返回对应的Class对象
-(3)如果没有找到，从磁盘或者远程服务器加载类，加载失败抛出ClassNotFound异常，加载成功返回对应的Class对象
-</pre></div>
-
-
-<h3>6.反射概念的总结</h3>
-<p>用Class实例化具体类对象，从而设置具体类对象的成员变量，或者调用具体类的成员方法</p>
-<h3>7.反射在框架中的应用？</h3>
-<p>IOC，AOP，设置对象属性</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="nx">OneClass …</span></pre></div>
+                <a class="readmore" href="/javaxue-xi-bi-ji-fan-she.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
